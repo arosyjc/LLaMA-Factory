@@ -174,7 +174,7 @@ def get_ray_args(args: Optional[Union[Dict[str, Any], List[str]]] = None) -> Ray
     (ray_args,) = _parse_args(parser, args, allow_extra_keys=True)
     return ray_args
 
-
+# 获取训练参数
 def get_train_args(args: Optional[Union[Dict[str, Any], List[str]]] = None) -> _TRAIN_CLS:
     model_args, data_args, training_args, finetuning_args, generating_args = _parse_train_args(args)
 

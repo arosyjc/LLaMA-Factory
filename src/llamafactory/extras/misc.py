@@ -287,7 +287,7 @@ def try_download_model_from_other_hub(model_args: "ModelArguments") -> str:
 
 
 def use_modelscope() -> bool:
-    return os.getenv("USE_MODELSCOPE_HUB", "0").lower() in ["true", "1"]
+    return os.getenv("USE_MODELSCOPE_HUB", "1").lower() in ["true", "1"]
 
 
 def use_openmind() -> bool:

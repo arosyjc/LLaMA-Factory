@@ -229,6 +229,7 @@ class ModelArguments(QuantizationArguments, ProcessorArguments, ExportArguments,
         default=False,
         metadata={"help": "Whether or not to enable liger kernel for faster training."},
     )
+    # moe架构中辅助路由损失的系数
     moe_aux_loss_coef: Optional[float] = field(
         default=None,
         metadata={"help": "Coefficient of the auxiliary router loss in mixture-of-experts model."},
@@ -237,6 +238,7 @@ class ModelArguments(QuantizationArguments, ProcessorArguments, ExportArguments,
         default=False,
         metadata={"help": "Whether or not to disable gradient checkpointing."},
     )
+    # 重新计算梯度递减的一些中间值
     use_reentrant_gc: bool = field(
         default=True,
         metadata={"help": "Whether or not to use reentrant gradient checkpointing."},
